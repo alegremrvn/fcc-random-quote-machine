@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+class RandomQuoteMachine extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    
+  }
+
+  render() {
+    return (
+      <div id="quote-box">
+        <p id="text"></p>
+        <p id="author"></p>
+        <button id="new-quote" onClick={this.handleClick}>New quote</button>
+        <a id="tweet-quote" href="https://twitter.com">tweet</a>
+      </div>
+    );
+  }
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RandomQuoteMachine />
     </div>
   );
 }
